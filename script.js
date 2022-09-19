@@ -5,7 +5,7 @@ frame.style.filter = "blur(3px)";
 textbox.addEventListener('keydown', function (e){
 		if (e.code == "Space") {
 			e.preventDefault();
-			frame.setAttribute("src", "https://classic.minecraft.net");
+			frame.setAttribute("src", "https://g.deev.is/eaglercraft/");
 			transition(); 
 		}
 	
