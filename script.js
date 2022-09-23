@@ -12,7 +12,8 @@ textbox.addEventListener('keydown', function(e) {
 	if (e.code == "Enter") {
 		e.preventDefault();
 		if (!textbox.value == "") {
-			if (!textbox.value.startsWith("https://")) textbox.value = "https://" + textbox.value;
+			if (!textbox.value.startsWith("https://") && !textbox.value.startsWith("http://")) 
+				textbox.value = "https://" + textbox.value;
 			frame.setAttribute("src", textbox.value);
 			transition();
 		}
