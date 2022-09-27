@@ -37,6 +37,7 @@ textbox.addEventListener('keydown', function(e) {
 		if (!textbox.value.startsWith("https://"))
 			textbox.value = "https://" + textbox.value;
 		frame.setAttribute("src", textbox.value);
+		popularButton.style.opacity = "0"; 
 		transition();
 	}
 }, false);
