@@ -12,9 +12,6 @@ textbox.addEventListener('keydown', function(e) {
 	if (e.code == "Space") {
 		e.preventDefault();
 		frame.setAttribute("src", defaultLink);
-		setTimeout(function() {
-			frame.style.opacity = "1";
-		}, 2000);
 		popularButton.style.opacity = "0"; 
 		transition();
 	}
@@ -55,12 +52,10 @@ function popularButtonClick(a) {
 		case 1: defaultLink = "https://slopegame.online"; break;
 		case 2: defaultLink = "https://augustberchelmann.com/mario/"; break;
 		case 3: defaultLink = "https://classic.minecraft.net"; break;
+		case 4: defaultLink = "https://vvvvvv-web.stencylxd.repl.co"; break;
 	}
 	textbox.value = defaultLink;
 	frame.setAttribute("src", defaultLink);
-	setTimeout(function() {
-		frame.style.opacity = "1";
-	}, 1000);
 	transition();
 }
 
@@ -77,5 +72,8 @@ function transition(error) {
 	popular.style.filter = "blur(3px)"
 	popular.style.opacity = "0";
 	textbox.style.visibility = "hidden";
-	frame.style.filter = "none";
+	setTimeout(function() {
+		frame.style.opacity = "1";
+		frame.style.filter = "none";
+	}, 1500);
 }
