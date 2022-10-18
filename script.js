@@ -5,6 +5,12 @@ var frame = document.getElementById("frame");
 var popular = document.getElementById("popular");
 var popularButton = document.getElementById("popular-button");
 var popularImages = document.getElementsByClassName("popular-img");
+const popularLinks = [
+  "https://slopegame.online",
+  "https://augustberchelmann.com/mario/",
+  "https://classic.minecraft.net",
+  "https://shellshock.io",
+];
 
 popularButton.style.transition = "all 1s";
 
@@ -40,20 +46,18 @@ textbox.addEventListener('keydown', function(e) {
 }, false);
 
 function popularButtonClick(a) {
-	switch (a) {
-		case 0: 
-			popularButton.style.opacity = "0"; 
-			popular.style.opacity = "1"; 
-			for (var i = 0; i < popularImages.length; i++) {
- 				popularImages[i].style.transition = "all 0.7s";
-				popularImages[i].style.opacity = "1";
-			}
-			return;
-		case 1: defaultLink = "https://slopegame.online"; break;
-		case 2: defaultLink = "https://augustberchelmann.com/mario/"; break;
-		case 3: defaultLink = "https://classic.minecraft.net"; break;
-		case 4: defaultLink = "https://vvvvvv-web.stencylxd.repl.co"; break;
-	}
+  if (a-1===-1) {
+		popularButton.style.visibility = "hidden";
+		popularButton.style.opacity = "0";
+		popular.style.opacity = "1"; 
+		for (var i = 0; i < popularImages.length; i++) {
+      		popularImages[i].style.visibility = "visible";
+ 			popularImages[i].style.transition = "all 0.7s";
+      		popularImages[i].style.opacity = "1";
+		}
+		return;
+  }
+	defaultLink = popularLinks[a-1];
 	textbox.value = defaultLink;
 	frame.setAttribute("src", defaultLink);
 	transition();
