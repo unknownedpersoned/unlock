@@ -1,4 +1,4 @@
-var defaultLink = "https://g.deev.is/eaglercraft/";
+var defaultLink = "https://sshwifty-demo.nirui.org/";
 
 var textbox = document.getElementById("textbox");
 var frame = document.getElementById("frame");
