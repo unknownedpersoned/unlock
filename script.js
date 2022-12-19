@@ -8,7 +8,7 @@ var popularImages = document.getElementsByClassName("popular-img");
 const popularLinks = [
   "https://slopegame.online",
   "https://augustberchelmann.com/mario/",
-  "https://classic.minecraft.net",
+  "https://garticphone.com",
   "https://shellshock.io",
 ];
 

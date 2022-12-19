@@ -54,9 +54,9 @@ html, body {
 .popular-img {
 	z-index: 1;
 	opacity: 0;
-  visibility: hidden;
+    visibility: hidden;
 	max-width: 15%;
-	border-radius: 10px;
+	border-radius: 120px;
 	margin-top: 15%;
 }
 
